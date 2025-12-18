@@ -96,7 +96,8 @@ st.write(
 
 # Sidebar controls
 st.sidebar.header("数据来源")
-last_n_days = st.sidebar.slider("加载最近 N 天", min_value=1, max_value=30, value=7, step=1)
+last_n_days = st.sidebar.slider("加载最近 N 天", min_value=1, max_value=90, value=30, step=1)
+
 if st.sidebar.button("刷新数据（清缓存）"):
     load_github_data.clear()
 st.sidebar.caption("提示：GitHub Actions 每 10 分钟更新一次；你也可以手动点上面的刷新。")
